@@ -69,10 +69,10 @@ const Dashboard = () => {
 
       <div className="flex gap-10 flex-wrap justify-center">
         
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4  rounded-2xl md:w-780 ">
                          
             <div>
-              <Stacked currentMode={currentMode} className='w-full sm:w-64' height="360px" />
+              <Stacked currentMode={currentMode} height="360px" />
             </div>
           
         </div>
@@ -106,6 +106,7 @@ const Dashboard = () => {
             <div className="w-40">
               <Pie id="pie-chart" data={ecomPieChartData} legendVisiblity={false} height="160px" />
             </div>
+            
           </div>
         </div>
       </div>

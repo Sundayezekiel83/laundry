@@ -20,8 +20,8 @@ const Login = () => {
    <img src={logo} className='w-16' alt='Ripple' /> 
    <span className='mt-4'>Ripple Finance</span>
      </div>
-      <div className="flex flex-col justify-center mt-10 overflow-hidden ">
-            <div className="p-6 m-auto bg-white rounded-md shadow-lg w-[30rem]">
+      <div className="flex flex-col justify-center mt-10 overflow-hidden flex-wrap ">
+            <div className="p-6 m-auto bg-white rounded-md shadow-lg md:w-[30rem]">
                 <h1 className="text-xl  text-center text-[#653434]">
                    LOGIN
                 </h1>
