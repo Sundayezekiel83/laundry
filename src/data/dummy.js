@@ -871,6 +871,50 @@ export const userProfileData = [
     iconBg: 'rgb(254, 201, 15)',
   },
 ];
+export const LoanRequest = [
+   { field: 'CustomerName',
+    headerText: 'Customer',
+    width: '150',
+    textAlign: 'Center',
+  },
+  
+  {
+    field: 'Location',
+    headerText: 'Location',
+    width: '150',
+    textAlign: 'Center',
+  },
+   {
+    field: 'OrderItems',
+    headerText: 'Amount Requested',
+    width: '150',
+    editType: 'dropdownedit',
+    textAlign: 'Center',
+  },
+  
+   {
+    field: 'TotalAmount',
+    headerText: 'Loan Duration',
+    format: 'C2',
+    textAlign: 'Center',
+    editType: 'numericedit',
+    width: '150',
+  },
+  {
+    headerText: 'Status',
+    template: gridOrderStatus,
+    field: 'OrderItems',
+    textAlign: 'Center',
+    width: '120',
+  },
+  {
+    field: 'OrderID',
+    headerText: 'Loan ID',
+    width: '120',
+    textAlign: 'Center',
+  },
+];
+
 
 export const ordersGrid = [
   {
@@ -879,6 +923,7 @@ export const ordersGrid = [
     textAlign: 'Center',
     width: '120',
   },
+  
   {
     field: 'OrderItems',
     headerText: 'Item',
@@ -886,8 +931,9 @@ export const ordersGrid = [
     editType: 'dropdownedit',
     textAlign: 'Center',
   },
+  
   { field: 'CustomerName',
-    headerText: 'Customer Name',
+    headerText: 'Customer',
     width: '150',
     textAlign: 'Center',
   },
@@ -2123,13 +2169,116 @@ export const employeesData = [
   },
 ];
 
+export const LoanRequestData = [
+ 
+  {
+    OrderID: 345653,
+    CustomerName: 'Carson Darrin',
+    TotalAmount: 56.34,
+    OrderItems: 'Butter Scotch',
+    Location: 'Delhi',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Fran Perez',
+    TotalAmount: 93.31,
+    OrderItems: 'Candy Gucci',
+    Location: 'New York',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:
+      product7,
+  },
+  {
+    OrderID: 893486,
+    CustomerName: 'Anika Viseer',
+    TotalAmount: 93.31,
+    OrderItems: 'Night Lamp',
+    Location: 'Germany',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:
+      product4,
+  },
+  {
+    OrderID: 748975,
+    CustomerName: 'Miron Vitold',
+    TotalAmount: 23.99,
+    OrderItems: 'Healthcare Erbology',
+    Location: 'Spain',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage:
+    product1,
+  },
+  {
+    OrderID: 94757,
+    CustomerName: 'Omar Darobe',
+    TotalAmount: 95.99,
+    OrderItems: 'Makeup Lancome Rouge',
+    Location: 'USA',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:
+      product2,
+  },
+  {
+    OrderID: 944895,
+    CustomerName: 'Lulia albu',
+    TotalAmount: 17.99,
+    OrderItems: 'Skincare',
+    Location: 'USA',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:
+      product3,
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Penjani',
+    TotalAmount: 59.99,
+    OrderItems: 'Headphone',
+    Location: 'USA',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:
+      product4,
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Jie Yan',
+    TotalAmount: 87.99,
+    OrderItems: 'Shoes',
+    Location: 'USA',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:
+      'https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg',
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Danai',
+    TotalAmount: 122.99,
+    OrderItems: 'Watch',
+    Location: 'USA',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+  }
+]
+
 export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
 
     TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
+    OrderItems: '',
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',

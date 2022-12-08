@@ -186,6 +186,7 @@ function SidebarMenu() {
             </List>
           </SubMenuWrapper>
         </List> */}
+
         <List
           component="div"
           subheader={
@@ -236,16 +237,30 @@ function SidebarMenu() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/app/transactions"
+                  to="/app/viewusers"
                   startIcon={<TableChartTwoToneIcon />}
                 >
-                  Transactions List
+                  View Users
+                </Button>
+              </ListItem>
+            </List>
+
+             <List component="div">
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/app/view_loan_request"
+                  startIcon={<TableChartTwoToneIcon />}
+                >
+                  View Loan Request
                 </Button>
               </ListItem>
             </List>
           </SubMenuWrapper>
         </List>
-        <List
+        {/* <List
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
@@ -279,7 +294,7 @@ function SidebarMenu() {
               </ListItem>
             </List>
           </SubMenuWrapper>
-        </List>
+        </List> */}
         {/* <List
           component="div"
           subheader={

@@ -157,7 +157,7 @@ const Dashboard = () => {
             <p className="text-xl font-semibold">Sales Overview</p>
             <DropDown currentMode={currentMode} />
           </div>
-          <div className="md:w-full overflow-auto">
+          <div className="md:w-full">
             <LineChart />
           </div>
         </div>

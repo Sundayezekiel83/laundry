@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { SidebarProvider } from './context/SideBarContext';
 import './index.css';
+import './App.css';
 
 ReactDOM.render(
   <HelmetProvider>

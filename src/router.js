@@ -26,6 +26,8 @@ const Dashboard = Loader(lazy(() => import("./pages/dashboard")));
 const Transactions = Loader(lazy(() => import("./pages/Transactions")));
 const UserProfile = Loader(lazy(() => import("./pages/profile")));
 const UserSettings = Loader(lazy(() => import("./pages/settings")));
+const ViewUsers = Loader(lazy(()=>import("./pages/tables/ViewUser")));
+const LoanRequest = Loader(lazy(() => import("./pages/tables/LoanRequest")));
 
 // Components
 
@@ -110,6 +112,7 @@ const routes = [
       // }
     ],
   },
+
   {
     path: "app",
     element: <SidebarLayout />,
@@ -126,17 +129,21 @@ const routes = [
       //   path: 'messenger',
       //   element: <Messenger />
       // },
+      // {
+      //   path: "profile",
+      //   element: <UserProfile />,
+      // },
+      // {
+      //   path: "settings",
+      //   element: <UserSettings />,
+      // },
       {
-        path: "profile",
-        element: <UserProfile />,
+        path: "viewusers",
+        element: <ViewUsers />,
       },
       {
-        path: "settings",
-        element: <UserSettings />,
-      },
-      {
-        path: "transactions",
-        element: <Transactions />,
+        path: "view_loan_request",
+        element: <LoanRequest />,
       },
     ],
   },
