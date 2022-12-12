@@ -11,8 +11,9 @@ const Login = () => {
   return (
  
     <>
-    <Helmet>
-      Login to Ripple Finance</Helmet>
+     <Helmet>
+        <title>Login-Ripple Loan</title>
+      </Helmet>
 
 
     <div className='text-xl  mt-10 grid place-items-center text-[#653434]'>

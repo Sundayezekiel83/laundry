@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import {Helmet} from "react-helmet-async";
 
 import { Stacked, Pie, Button, LineChart, SparkLine } from '../../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../../data/dummy';
@@ -19,6 +20,10 @@ const Dashboard = () => {
     const [currentColor, setCurrentColor] = useState("#653434");
     
   return (
+    <>
+     <Helmet>
+        <title>Dashboard-Management</title>
+      </Helmet>
     <div className="mt-10">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
@@ -167,6 +172,7 @@ const Dashboard = () => {
 
      
     </div>
+    </>
   );
 };
 

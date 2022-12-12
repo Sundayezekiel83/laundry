@@ -2,8 +2,8 @@ import { alpha, createTheme, lighten, darken } from '@mui/material';
 import '@mui/lab/themeAugmentation';
 
 const themeColors = {
-  primary: '#5569ff',
-  secondary: '#6E759F',
+  primary: '#653434',
+  secondary: '#653434',
   success: '#57CA22',
   warning: '#FFA319',
   error: '#FF1943',
@@ -50,7 +50,7 @@ const colors = {
   },
   layout: {
     general: {
-      bodyBg: '#f2f5f9'
+      bodyBg: '#FAFBFB'
     },
     sidebar: {
       background: themeColors.white,
