@@ -33,6 +33,7 @@ function Header() {
   const theme = useTheme();
 
   return (
+    
     <HeaderWrapper
       display="flex"
       alignItems="center"
@@ -50,9 +51,10 @@ function Header() {
       }}
     >
       <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} alignItems="center" spacing={2}>
-        
+        <HeaderMenu />
       </Stack>
       <Box display="flex" alignItems="center">
+        
         <HeaderButtons />
         <HeaderUserbox />
         <Box

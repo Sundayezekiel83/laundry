@@ -2170,8 +2170,7 @@ export const employeesData = [
 ];
 
 export const LoanRequestData = [
- 
-  {
+   {
     OrderID: 345653,
     CustomerName: 'Carson Darrin',
     TotalAmount: 56.34,

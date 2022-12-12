@@ -67,20 +67,20 @@ const Dashboard = () => {
 
       </div>
 
-      <div className="flex gap-10 flex-wrap justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center ">
         
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4  rounded-2xl md:w-780 ">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 lg:col-span-2 p-4 rounded-2xl">
                          
             <div>
-              <Stacked currentMode={currentMode} height="360px" />
+              <Stacked currentMode={currentMode} className=' md:w-full lg:w-full' />
             </div>
           
         </div>
 
 
-        <div>
+        <div className=''>
           <div
-            className=" rounded-2xl md:w-400 p-4 m-3"
+            className=" rounded-2xl p-4 m-3 md:w-400"
             style={{ backgroundColor: currentColor }}
           >
             <div className="flex justify-between items-center ">
@@ -109,6 +109,7 @@ const Dashboard = () => {
             
           </div>
         </div>
+
       </div>
 
       <div className="flex gap-10 m-4 flex-wrap justify-center">
