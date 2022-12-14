@@ -16,7 +16,7 @@ const SidebarWrapper = styled(Box)(
         z-index: 7;
         height: 100%;
         padding-bottom: 68px;
-`
+        `
 );
 
 function Sidebar() {
@@ -37,10 +37,10 @@ function Sidebar() {
           top: 0,
           background:
             theme.palette.mode === "dark"
-              ? alpha(lighten(theme.header.background, 0.1), 0.5)
-              : darken(theme.colors.alpha.black[100], 0.5),
-          boxShadow: theme.palette.mode === "dark" ? theme.sidebar.boxShadow : "none",
-        }}
+              ? "#fffff"
+                    : alpha(lighten(theme.header.background, 0.1), 0.5),
+
+                  }}
       >
         <Scrollbar>
           <Box mt={3}>
@@ -53,20 +53,11 @@ function Sidebar() {
               <Logo />
             </Box>
           </Box>
-          <Divider
-            sx={{
-              mt: theme.spacing(3),
-              mx: theme.spacing(2),
-              background: theme.colors.alpha.trueWhite[10],
-            }}
-          />
-          <SidebarMenu />
+
+         <SidebarMenu />
+
         </Scrollbar>
-        <Divider
-          sx={{
-            background: theme.colors.alpha.trueWhite[10],
-          }}
-        />
+        
         <Box p={2}>
           {/* <Button
             href="https://bloomui.com"
@@ -81,6 +72,7 @@ function Sidebar() {
           </Button> */}
         </Box>
       </SidebarWrapper>
+
       <Drawer
         sx={{
           boxShadow: `${theme.sidebar.boxShadow}`,

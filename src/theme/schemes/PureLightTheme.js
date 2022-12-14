@@ -254,7 +254,7 @@ export const PureLightTheme = createTheme({
       black: colors.alpha.black[100],
       white: colors.alpha.white[100]
     },
-    mode: 'light',
+    mode: 'dark',
     primary: {
       light: colors.primary.light,
       main: colors.primary.main,
@@ -567,6 +567,7 @@ export const PureLightTheme = createTheme({
         }
       }
     },
+
     MuiButton: {
       defaultProps: {
         disableRipple: true
@@ -587,7 +588,7 @@ export const PureLightTheme = createTheme({
         },
         containedSecondary: {
           backgroundColor: colors.secondary.main,
-          color: colors.alpha.white[100],
+          color: colors.alpha.black[100],
           border: '1px solid ' + colors.alpha.black[30]
         },
         outlinedSecondary: {

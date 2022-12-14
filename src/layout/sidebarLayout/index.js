@@ -20,6 +20,7 @@ const SidebarLayout = () => {
                 ? theme.colors.alpha.trueWhite[5]
                 : theme.colors.alpha.white[50],
             marginBottom: `${theme.spacing(4)}`,
+            
             boxShadow:
               theme.palette.mode === 'dark'
                 ? `0 1px 0 ${alpha(

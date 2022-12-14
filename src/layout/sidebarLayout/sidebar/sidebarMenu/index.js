@@ -8,27 +8,27 @@ import DesignServicesTwoToneIcon from "@mui/icons-material/DesignServicesTwoTone
 import BrightnessLowTwoToneIcon from "@mui/icons-material/BrightnessLowTwoTone";
 import MmsTwoToneIcon from "@mui/icons-material/MmsTwoTone";
 import TableChartTwoToneIcon from "@mui/icons-material/TableChartTwoTone";
-import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
-import BallotTwoToneIcon from "@mui/icons-material/BallotTwoTone";
-import BeachAccessTwoToneIcon from "@mui/icons-material/BeachAccessTwoTone";
-import EmojiEventsTwoToneIcon from "@mui/icons-material/EmojiEventsTwoTone";
-import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
-import HowToVoteTwoToneIcon from "@mui/icons-material/HowToVoteTwoTone";
-import LocalPharmacyTwoToneIcon from "@mui/icons-material/LocalPharmacyTwoTone";
-import RedeemTwoToneIcon from "@mui/icons-material/RedeemTwoTone";
-import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone";
-import TrafficTwoToneIcon from "@mui/icons-material/TrafficTwoTone";
-import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone";
-import ChromeReaderModeTwoToneIcon from "@mui/icons-material/ChromeReaderModeTwoTone";
-import WorkspacePremiumTwoToneIcon from "@mui/icons-material/WorkspacePremiumTwoTone";
-import CameraFrontTwoToneIcon from "@mui/icons-material/CameraFrontTwoTone";
-import DisplaySettingsTwoToneIcon from "@mui/icons-material/DisplaySettingsTwoTone";
+// import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
+// import BallotTwoToneIcon from "@mui/icons-material/BallotTwoTone";
+// import BeachAccessTwoToneIcon from "@mui/icons-material/BeachAccessTwoTone";
+// import EmojiEventsTwoToneIcon from "@mui/icons-material/EmojiEventsTwoTone";
+// import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
+// import HowToVoteTwoToneIcon from "@mui/icons-material/HowToVoteTwoTone";
+// import LocalPharmacyTwoToneIcon from "@mui/icons-material/LocalPharmacyTwoTone";
+// import RedeemTwoToneIcon from "@mui/icons-material/RedeemTwoTone";
+// import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone";
+// import TrafficTwoToneIcon from "@mui/icons-material/TrafficTwoTone";
+// import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone";
+// import ChromeReaderModeTwoToneIcon from "@mui/icons-material/ChromeReaderModeTwoTone";
+// import WorkspacePremiumTwoToneIcon from "@mui/icons-material/WorkspacePremiumTwoTone";
+// import CameraFrontTwoToneIcon from "@mui/icons-material/CameraFrontTwoTone";
+// import DisplaySettingsTwoToneIcon from "@mui/icons-material/DisplaySettingsTwoTone";
 
 const MenuWrapper = styled(Box)(
   ({theme}) => `
   .MuiList-root {
     padding: ${theme.spacing(1)};
-
+    
     & > .MuiList-root {
       padding: 0 ${theme.spacing(0)} ${theme.spacing(1)};
     }
@@ -67,7 +67,7 @@ const SubMenuWrapper = styled(Box)(
     
         .MuiButton-root {
           display: flex;
-          color: ${theme.colors.alpha.trueWhite[70]};
+          color: ${theme.colors.alpha.black[100]};
           background-color: transparent;
           width: 100%;
           justify-content: flex-start;
@@ -98,7 +98,7 @@ const SubMenuWrapper = styled(Box)(
 
           &.active,
           &:hover {
-            background-color: ${alpha(theme.colors.alpha.trueWhite[100], 0.06)};
+            background-color: ${theme.colors.primary.main};
             color: ${theme.colors.alpha.trueWhite[100]};
 
             .MuiButton-startIcon,
@@ -188,12 +188,13 @@ function SidebarMenu() {
         </List> */}
 
         <List
-          component="div"
+         component="div"
           subheader={
-            <ListSubheader component="div" disableSticky>
-              Overview
+            <ListSubheader component="div"  disableSticky>
+             <span className="text-gray-300 text-[1rem] mb-3"> Overview</span>
             </ListSubheader>
           }
+
         >
           <SubMenuWrapper>
             <List component="div">
@@ -222,11 +223,12 @@ function SidebarMenu() {
             </List>
           </SubMenuWrapper>
         </List>
+        
         <List
-          component="div"
+           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
-              Management
+              <span className="text-gray-400 text-[1rem] text-md"> Management</span>
             </ListSubheader>
           }
         >
