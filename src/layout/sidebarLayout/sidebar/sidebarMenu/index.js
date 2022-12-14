@@ -1,14 +1,15 @@
-import {useContext} from "react";
+import {useContext, useState} from "react";
 
 import {ListSubheader, alpha, Box, List, styled, Button, ListItem} from "@mui/material";
-import {NavLink as RouterLink} from "react-router-dom";
 import {SidebarContext} from "../../../../context/SideBarContext";
+import { Link, NavLink} from 'react-router-dom';
 
 import DesignServicesTwoToneIcon from "@mui/icons-material/DesignServicesTwoTone";
 import BrightnessLowTwoToneIcon from "@mui/icons-material/BrightnessLowTwoTone";
 import MmsTwoToneIcon from "@mui/icons-material/MmsTwoTone";
 import TableChartTwoToneIcon from "@mui/icons-material/TableChartTwoTone";
-// import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
+import ripplelogo from '../../../../assets/image/R_energy.png'
+import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
 // import BallotTwoToneIcon from "@mui/icons-material/BallotTwoTone";
 // import BeachAccessTwoToneIcon from "@mui/icons-material/BeachAccessTwoTone";
 // import EmojiEventsTwoToneIcon from "@mui/icons-material/EmojiEventsTwoTone";
@@ -22,7 +23,7 @@ import TableChartTwoToneIcon from "@mui/icons-material/TableChartTwoTone";
 // import ChromeReaderModeTwoToneIcon from "@mui/icons-material/ChromeReaderModeTwoTone";
 // import WorkspacePremiumTwoToneIcon from "@mui/icons-material/WorkspacePremiumTwoTone";
 // import CameraFrontTwoToneIcon from "@mui/icons-material/CameraFrontTwoTone";
-// import DisplaySettingsTwoToneIcon from "@mui/icons-material/DisplaySettingsTwoTone";
+import DisplaySettingsTwoToneIcon from "@mui/icons-material/DisplaySettingsTwoTone";
 
 const MenuWrapper = styled(Box)(
   ({theme}) => `
@@ -164,11 +165,16 @@ const SubMenuWrapper = styled(Box)(
 );
 
 function SidebarMenu() {
+
+  
   const {closeSidebar} = useContext(SidebarContext);
+  const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2';
+  const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
+  const [currentColor, setCurrentColor] = useState('#653434')
 
   return (
     <>
-      <MenuWrapper>
+      
         {/* <List component="div">
           <SubMenuWrapper>
             <List component="div">
@@ -187,43 +193,63 @@ function SidebarMenu() {
           </SubMenuWrapper>
         </List> */}
 
-        <List
-         component="div"
-          subheader={
-            <ListSubheader component="div"  disableSticky>
-             <span className="text-gray-300 text-[1rem] mb-3"> Overview</span>
-            </ListSubheader>
-          }
-
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/app/overview"
-                  startIcon={<BrightnessLowTwoToneIcon />}
-                >
+        <div className="mt-10 ">
+            
+              <div >
+                <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
                   Dashboard
-                </Button>
-              </ListItem>
-              {/* <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/app/messenger"
-                  startIcon={<MmsTwoToneIcon />}
-                >
-                  Messenger
-                </Button>
-              </ListItem> */}
-            </List>
-          </SubMenuWrapper>
-        </List>
-        
+                </p>
+                   <NavLink
+                    onClick={closeSidebar}
+                    to={`/app/overview`}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
+                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                  >
+                    <TableChartTwoToneIcon />
+                    <span className="capitalize ">DashBoard</span>
+                  </NavLink>
+                
+              </div>
+            
+          </div>
+
+           <div className="mt-10 ">
+            
+              <div >
+                <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
+                 Management
+                </p>
+                   <NavLink
+                    onClick={closeSidebar}
+                    to={`/app/view_loan_request`}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
+                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                  >
+                   <DisplaySettingsTwoToneIcon />
+                    <span className="capitalize ">View Loan request</span>
+                  </NavLink>
+
+                   <NavLink
+                    onClick={closeSidebar}
+                    to={`/app/viewUsers`}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
+                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                  >
+                    <AccountCircleTwoToneIcon />
+                    <span className="capitalize ">View Users</span>
+                  </NavLink>
+                
+                
+              </div>
+            
+          </div>
+{/*         
         <List
            component="div"
           subheader={
@@ -261,7 +287,7 @@ function SidebarMenu() {
               </ListItem>
             </List>
           </SubMenuWrapper>
-        </List>
+        </List> */}
         {/* <List
           component="div"
           subheader={
@@ -466,7 +492,7 @@ function SidebarMenu() {
             </List>
           </SubMenuWrapper>
         </List> */}
-      </MenuWrapper>
+      
     </>
   );
 }
