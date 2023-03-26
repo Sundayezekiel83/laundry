@@ -23,11 +23,6 @@ const Dashboard = Loader(lazy(() => import("./pages/dashboard")));
 // Applications
 
 // const Messenger = Loader(lazy(() => import('./pages/applications/Messenger')));
-const Transactions = Loader(lazy(() => import("./pages/Transactions")));
-const UserProfile = Loader(lazy(() => import("./pages/profile")));
-const UserSettings = Loader(lazy(() => import("./pages/settings")));
-const ViewUsers = Loader(lazy(()=>import("./pages/tables/ViewUser")));
-const LoanRequest = Loader(lazy(() => import("./pages/tables/LoanRequest")));
 
 // Components
 
@@ -137,14 +132,6 @@ const routes = [
       //   path: "settings",
       //   element: <UserSettings />,
       // },
-      {
-        path: "viewusers",
-        element: <ViewUsers />,
-      },
-      {
-        path: "view_loan_request",
-        element: <LoanRequest />,
-      },
     ],
   },
   // {

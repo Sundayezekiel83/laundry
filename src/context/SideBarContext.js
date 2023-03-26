@@ -1,10 +1,8 @@
-import { useState, createContext } from 'react';
+import {useState, createContext} from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SidebarContext = createContext();
 
-export const SidebarProvider = ({ children }) => {
-  
+export const SidebarProvider = ({children}) => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
 
   const toggleSidebar = () => {
@@ -15,10 +13,6 @@ export const SidebarProvider = ({ children }) => {
   };
 
   return (
-    <SidebarContext.Provider
-      value={{ sidebarToggle, toggleSidebar, closeSidebar }}
-    >
-      {children}
-    </SidebarContext.Provider>
+    <SidebarContext.Provider value={{sidebarToggle, toggleSidebar, closeSidebar}}>{children}</SidebarContext.Provider>
   );
 };

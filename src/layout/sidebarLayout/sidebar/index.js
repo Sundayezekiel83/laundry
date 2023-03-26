@@ -2,7 +2,7 @@ import {useContext} from "react";
 import Scrollbar from "../../../components/Scrollbar";
 import {SidebarContext} from "../../../context/SideBarContext";
 
-import {Box, Drawer, alpha, styled, Divider, useTheme, lighten, darken} from "@mui/material";
+import {Box, Drawer, Divider, styled, useTheme} from "@mui/material";
 
 import SidebarMenu from "./sidebarMenu";
 import Logo from "../../../components/LogoSign";
@@ -13,15 +13,19 @@ const SidebarWrapper = styled(Box)(
         min-width: ${theme.sidebar.width};
         color: ${theme.colors.alpha.trueWhite[70]};
         position: relative;
+        background-color: #45cccc;
         z-index: 7;
         height: 100%;
         padding-bottom: 68px;
+        
         `
 );
 
 function Sidebar() {
   const {sidebarToggle, toggleSidebar} = useContext(SidebarContext);
+
   const closeSidebar = () => toggleSidebar();
+
   const theme = useTheme();
 
   return (
@@ -35,42 +39,20 @@ function Sidebar() {
           position: "fixed",
           left: 0,
           top: 0,
-          background:
-            theme.palette.mode === "dark"
-              ? "#fffff"
-                    : alpha(lighten(theme.header.background, 0.1), 0.5),
-
-                  }}
+        }}
       >
-        <Scrollbar>
-          <Box mt={3}>
-            <Box
-              mx={2}
-              sx={{
-                width: "100%",
-              }}
-            >
-              <Logo />
-            </Box>
-          </Box>
-
-         <SidebarMenu />
-
-        </Scrollbar>
-        
-        <Box p={2}>
-          {/* <Button
-            href="https://bloomui.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="contained"
-            color="warning"
-            size="small"
-            fullWidth
+        <Box mt={3}>
+          <Box
+            mx={2}
+            sx={{
+              width: "100%",
+            }}
           >
-            Upgrade to PRO
-          </Button> */}
+            <Logo />
+          </Box>
         </Box>
+
+        <SidebarMenu />
       </SidebarWrapper>
 
       <Drawer
@@ -83,34 +65,25 @@ function Sidebar() {
         variant="temporary"
         elevation={9}
       >
-        <SidebarWrapper
-          sx={{
-            background:
-              theme.palette.mode === "dark"
-                ? theme.colors.alpha.white[100]
-                : darken(theme.colors.alpha.black[100], 0.5),
-          }}
-        >
-          <Scrollbar>
-            <Box mt={3}>
-              <Box
-                mx={2}
-                sx={{
-                  width: 52,
-                }}
-              >
-                <Logo />
-              </Box>
-            </Box>
-            <Divider
+        <SidebarWrapper>
+          <Box mt={3}>
+            <Box
+              mx={2}
               sx={{
-                mt: theme.spacing(3),
-                mx: theme.spacing(2),
-                background: theme.colors.alpha.trueWhite[10],
+                width: 52,
               }}
-            />
-            <SidebarMenu />
-          </Scrollbar>
+            >
+              <Logo />
+            </Box>
+          </Box>
+          <Divider
+            sx={{
+              mt: theme.spacing(3),
+              mx: theme.spacing(2),
+              background: theme.colors.alpha.trueWhite[10],
+            }}
+          />
+          <SidebarMenu />
         </SidebarWrapper>
       </Drawer>
     </>

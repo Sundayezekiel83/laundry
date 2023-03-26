@@ -18,6 +18,8 @@ const HeaderWrapper = styled(Box)(
         z-index: 6;
         position: fixed;
         justify-content: space-between;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         width: 100%;
         @media (min-width: ${theme.breakpoints.values.lg}px) {
             left: ${theme.sidebar.width};
@@ -31,18 +33,14 @@ function Header() {
   const theme = useTheme();
 
   return (
-    
-    <HeaderWrapper
-      display="flex"
-      alignItems="center"
-     
-    >
-      <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} alignItems="center" spacing={2}>
-        
-      </Stack>
+    <HeaderWrapper display="flex" alignItems="center">
+      <Stack
+        direction="row"
+        divider={<Divider orientation="vertical" flexItem />}
+        alignItems="center"
+        spacing={2}
+      ></Stack>
       <Box display="flex" alignItems="center">
-        
-        <HeaderButtons />
         <HeaderUserbox />
         <Box
           component="span"
@@ -51,11 +49,9 @@ function Header() {
             display: {lg: "none", xs: "inline-block"},
           }}
         >
-          
-            <IconButton color="primary" onClick={toggleSidebar}>
-              {!sidebarToggle ? <MenuTwoToneIcon fontSize="small" /> : <CloseTwoToneIcon fontSize="small" />}
-            </IconButton>
-         
+          <IconButton color="primary" onClick={toggleSidebar}>
+            {!sidebarToggle ? <MenuTwoToneIcon fontSize="small" /> : <CloseTwoToneIcon fontSize="small" />}
+          </IconButton>
         </Box>
       </Box>
     </HeaderWrapper>

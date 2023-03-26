@@ -1,5 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: white; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #45cccc; /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 1px solid #45cccc; /* creates padding around scroll thumb */
+}

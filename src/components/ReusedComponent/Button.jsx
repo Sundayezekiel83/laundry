@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
 // import { useStateContext } from '../contexts/ContextProvider';
 
-const Button = ({ icon, bgColor, color, bgHoverColor, size, text, borderRadius, width }) => {
+const Button = ({icon, bgColor, color, bgHoverColor, size, text, borderRadius, width}) => {
   // const { closeHandleClick } = useStateContext();
 
   return (
     <button
       type="button"
-      // onClick={() => closeHandleClick('cart')}
-      style={{ backgroundColor: bgColor, color, borderRadius }}
+      style={{backgroundColor: bgColor, color, borderRadius}}
       className={` text-${size} p-3 w-${width} hover:drop-shadow-xl hover:bg-${bgHoverColor}`}
     >
       {icon} {text}
