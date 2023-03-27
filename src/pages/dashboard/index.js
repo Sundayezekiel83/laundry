@@ -75,7 +75,7 @@ const Dashboard = () => {
       </div>
       <div className="px-6 ">
         <div className="px-8 py-4 mt-8 rounded-lg bg-white ">
-          <div className="p-2">
+          <div className=" p-0 lg:p-2">
             <StickyHeadTable />
           </div>
         </div>
